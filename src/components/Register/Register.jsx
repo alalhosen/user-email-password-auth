@@ -1,7 +1,11 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
+import { useState } from "react";
 
 const Register = () => {
+
+const [registerError, setRegisterError]=useState('');
+
   const handleRegister = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
