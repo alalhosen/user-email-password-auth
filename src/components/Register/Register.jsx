@@ -18,7 +18,8 @@ const [registerError, setRegisterError]=useState('');
       console.log(result.user)
     })
     .catch(error =>{
-      console.error(error)
+      console.error(error);
+      setRegisterError(error.message);  
     })
   };
 
@@ -49,6 +50,9 @@ const [registerError, setRegisterError]=useState('');
             value="Register"
           />
         </form>
+        {
+          registerError && <p className="text-red-600">{registerError}</p>
+        }
       </div>
     </div>
   );
