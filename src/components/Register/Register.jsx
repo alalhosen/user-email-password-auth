@@ -44,7 +44,7 @@ const Register = () => {
             type="email"
             name="email"
             placeholder="Email Address"
-            id=""
+            id="" required
           />
           <br />
           <input
@@ -52,7 +52,7 @@ const Register = () => {
             type="password"
             name="password"
             placeholder="Password"
-            id=""
+            id="" required
           />
           <br />
           <input
