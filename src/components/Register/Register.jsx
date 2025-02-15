@@ -12,14 +12,21 @@ const Register = () => {
     const password = e.target.password.value;
     console.log(email, password);
 
+    if (password.length <6){
+      setRegisterError('Password should be at least 6 characters or longer')
+      return;
+    }
+
+
     //reset error
     setRegisterError("");
+    setSuccess("");
 
     //create user
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         console.log(result.user);
-        setSuccess('user created successfully.')
+        setSuccess("user created successfully.");
       })
       .catch((error) => {
         console.error(error);
@@ -55,9 +62,7 @@ const Register = () => {
           />
         </form>
         {registerError && <p className="text-red-600">{registerError}</p>}
-        {
-          success && <p className="text-green-500">{success}</p>
-        }
+        {success && <p className="text-green-500">{success}</p>}
       </div>
     </div>
   );
