@@ -5,6 +5,7 @@ import { useState } from "react";
 const Register = () => {
   const [registerError, setRegisterError] = useState("");
   const [success, setSuccess] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -54,11 +55,12 @@ const Register = () => {
           <br />
           <input
             className="mb-4 w-3/4 bg-gray-300 rounded-lg py-2 px-4"
-            type="password"
+            type={showPassword ?  "text" : "password"}
             name="password"
             placeholder="Password"
             id="" required
           />
+        <span onClick={ () =>setShowPassword(!showPassword)}>show</span>
           <br />
           <input
             className="mb-4 w-3/4 btn btn-secondary"
