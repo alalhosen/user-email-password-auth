@@ -47,28 +47,30 @@ const Register = () => {
         <h3 className="text-3xl mb-8">Please Register</h3>
         <form onSubmit={handleRegister}>
           <input
-            className="mb-4 w-3/4 rounded-lg bg-gray-300 py-2 px-4"
+            className="mb-4 w-full rounded-lg bg-gray-300 py-2 px-4"
             type="email"
             name="email"
             placeholder="Email Address"
             id="" required
           />
           <br />
-          <input
-            className="mb-4 w-3/4 bg-gray-300 rounded-lg py-2 px-4"
+     <div className="relative mb-4 border">
+     <input
+            className="w-full bg-gray-300 rounded-lg py-2 px-4"
             type={showPassword ?  "text" : "password"}
             name="password"
             placeholder="Password"
             id="" required
           />
-        <span onClick={ () =>setShowPassword(!showPassword)}>
+        <span className="absolute top-1/2" onClick={ () =>setShowPassword(!showPassword)}>
           {
             showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
           }
           </span>
+     </div>
           <br />
           <input
-            className="mb-4 w-3/4 btn btn-secondary"
+            className="mb-4 w-full btn btn-secondary"
             type="submit"
             value="Register"
           />
