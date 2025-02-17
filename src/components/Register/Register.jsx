@@ -69,8 +69,10 @@ const Register = () => {
           </span>
      </div>
           <br />
+          <div className="mb-2">
           <input type="checkbox" name="terms" id="terms" />
-          <label htmlFor="terms">Accept our Terms and Conditions</label>
+          <label className="ml-2" htmlFor="terms">Accept our <a href="">Terms and Conditions</a></label>
+          </div>
           <br/>
           <input
             className="mb-4 w-full btn btn-secondary"
