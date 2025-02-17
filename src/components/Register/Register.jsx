@@ -62,13 +62,16 @@ const Register = () => {
             placeholder="Password"
             id="" required
           />
-        <span className="absolute top-1/2" onClick={ () =>setShowPassword(!showPassword)}>
+        <span className="absolute top-3 right-2" onClick={ () =>setShowPassword(!showPassword)}>
           {
             showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
           }
           </span>
      </div>
           <br />
+          <input type="checkbox" name="terms" id="terms" />
+          <label htmlFor="terms">Accept our Terms and Conditions</label>
+          <br/>
           <input
             className="mb-4 w-full btn btn-secondary"
             type="submit"
