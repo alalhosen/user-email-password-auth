@@ -12,7 +12,8 @@ const Register = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+    const accepted = e.target.terms.checked;
+    console.log(email, password, accepted);
 
     if (password.length <6){
       setRegisterError('Password should be at least 6 characters or longer')
@@ -24,6 +25,9 @@ const Register = () => {
         return;
       }
 
+      else if (!accepted){
+        setRegisterError('Please accept our terms and condition!')
+      }
 
     //reset error
     setRegisterError("");
