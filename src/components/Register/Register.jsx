@@ -27,6 +27,7 @@ const Register = () => {
 
       else if (!accepted){
         setRegisterError('Please accept our terms and condition!')
+        return;
       }
 
     //reset error
