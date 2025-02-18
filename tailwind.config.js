@@ -4,6 +4,10 @@
   theme: {
     extend: {},
   },
+
+  plugins: [
+    tailwindcss(),
+  ],
   plugins: [
     require('daisyui'),
   ],
