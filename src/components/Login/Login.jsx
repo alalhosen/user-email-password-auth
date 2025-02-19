@@ -1,7 +1,11 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
+import { useState } from "react";
 
 const Login = () => {
+    const [registerError, setRegisterError] = useState("");
+    const [success, setSuccess] = useState("");
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
