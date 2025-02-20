@@ -1,6 +1,7 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [registerError, setRegisterError] = useState("");
@@ -11,6 +12,10 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
+
+    //reset error and success
+    setRegisterError("");
+    setSuccess("");
 
     // add validation
     signInWithEmailAndPassword(auth, email, password)
@@ -76,6 +81,8 @@ const Login = () => {
             </form>
             {registerError && <p className="text-red-600">{registerError}</p>}
             {success && <p className="text-green-500">{success}</p>}
+
+            <p>New to this website? Please <Link className="text-green-400" to={"/register"}>Register</Link></p>
           </div>
         </div>
       </div>

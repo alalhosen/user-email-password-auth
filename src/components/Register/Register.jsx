@@ -30,7 +30,7 @@ const Register = () => {
         return;
       }
 
-    //reset error
+    //reset error and success
     setRegisterError("");
     setSuccess("");
 
