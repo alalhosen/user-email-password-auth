@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const [registerError, setRegisterError] = useState("");
   const [success, setSuccess] = useState("");
+  const emailRef = useRef(null);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -55,6 +56,7 @@ const Login = () => {
                 <input
                   type="email"
                   placeholder="email"
+                  ref={emailRef}
                   name="email"
                   className="input input-bordered"
                   required
