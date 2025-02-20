@@ -29,6 +29,10 @@ const Login = () => {
       });
   };
 
+  const handleForgetPassword = e => {
+    console.log('send reset email')
+  }
+
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -68,7 +72,7 @@ const Login = () => {
                   required
                 />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
+                  <a onClick={handleForgetPassword} href="#" className="label-text-alt link link-hover">
                     Forgot password?
                   </a>
                 </label>
