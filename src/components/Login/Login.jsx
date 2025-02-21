@@ -1,6 +1,6 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
@@ -30,9 +30,9 @@ const Login = () => {
       });
   };
 
-  const handleForgetPassword = e => {
-    console.log('send reset email')
-  }
+  const handleForgetPassword = (e) => {
+    console.log("send reset email", emailRef.current.value);
+  };
 
   return (
     <div className="hero bg-base-200 min-h-screen">
@@ -74,7 +74,11 @@ const Login = () => {
                   required
                 />
                 <label className="label">
-                  <a onClick={handleForgetPassword} href="#" className="label-text-alt link link-hover">
+                  <a
+                    onClick={handleForgetPassword}
+                    href="#"
+                    className="label-text-alt link link-hover"
+                  >
                     Forgot password?
                   </a>
                 </label>
@@ -88,7 +92,12 @@ const Login = () => {
             {registerError && <p className="text-red-600">{registerError}</p>}
             {success && <p className="text-green-500">{success}</p>}
 
-            <p>New to this website? Please <Link className="text-green-400 font-bold" to={"/register"}>Register</Link></p>
+            <p>
+              New to this website? Please{" "}
+              <Link className="text-green-400 font-bold" to={"/register"}>
+                Register
+              </Link>
+            </p>
           </div>
         </div>
       </div>
