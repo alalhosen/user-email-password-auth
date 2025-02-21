@@ -13,7 +13,7 @@ const Home = () => {
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-md">
           <h1 className="mb-5 text-6xl font-bold">Hello there</h1>
-          <p className="mb-5 text-black font-semibold">
+          <p className="mb-5 text-black font-semibold">Visiting place is the best place in the world. I want to visit place. Which is located.
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
