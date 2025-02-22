@@ -30,8 +30,17 @@ const Login = () => {
       });
   };
 
-  const handleForgetPassword = (e) => {
-    console.log("send reset email", emailRef.current.value);
+  const handleForgetPassword = () => {
+    const email =emailRef.current.value;
+    if(!email){
+      console.log("please provide an email", emailRef.current.value);
+      return;
+    }
+    else if(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))
+    {
+      console.log('Please write a valid email')
+      return;
+    }
   };
 
   return (
