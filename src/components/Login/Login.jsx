@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { sendPasswordResetEmail, signInWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
@@ -36,12 +36,18 @@ const Login = () => {
       console.log("please provide an email", emailRef.current.value);
       return;
     }
-    else if(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))
+    else if(!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))
     {
       console.log('Please write a valid email')
       return;
     }
+
+    // send validation email
+    sendPasswordResetEmail(auth, email)
   };
+
+
+
 
   return (
     <div className="hero bg-base-200 min-h-screen">
