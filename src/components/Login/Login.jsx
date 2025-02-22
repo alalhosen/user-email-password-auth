@@ -44,6 +44,13 @@ const Login = () => {
 
     // send validation email
     sendPasswordResetEmail(auth, email)
+    .then(() => {
+      // alert('please check your email')
+      alert('please check your email')
+    })
+    .catch(error => {
+      console.log(error)
+    })
   };
 
 
