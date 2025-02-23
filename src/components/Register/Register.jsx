@@ -70,6 +70,9 @@ updateProfile(result.user, {
       <div className="mx-auto md:w-1/2">
         <h3 className="text-3xl mb-8">Please Register</h3>
         <form onSubmit={handleRegister}>
+        <label className="label">
+                  <span className="label-text">Name</span>
+                </label>
           <input
             className="mb-4 w-full rounded-lg bg-gray-300 py-2 px-4"
             type="text"
@@ -79,6 +82,9 @@ updateProfile(result.user, {
             required
           />
 
+<label className="label">
+                  <span className="label-text">Email</span>
+                </label>
           <input
             className="mb-4 w-full rounded-lg bg-gray-300 py-2 px-4"
             type="email"
@@ -90,6 +96,10 @@ updateProfile(result.user, {
 
           <br />
           <div className="relative mb-4 border">
+
+          <label className="label">
+                  <span className="label-text">Password</span>
+                </label>
             <input
               className="w-full bg-gray-300 rounded-lg py-2 px-4"
               type={showPassword ? "text" : "password"}
