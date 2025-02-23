@@ -66,7 +66,7 @@ updateProfile(result.user, {
   };
 
   return (
-    <div className="border">
+    <div className="border bg-base-300 min-h-screen">
       <div className="mx-auto md:w-1/2">
         <h3 className="text-3xl mb-8">Please Register</h3>
         <form onSubmit={handleRegister}>
