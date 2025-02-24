@@ -16,6 +16,7 @@ const Home = () => {
           <p className="mb-5 text-black font-semibold">Visiting place is the best place in the world. I want to visit place. Which is located. Eveyone visit this place to register & login. 
           </p>
           <button className="btn btn-primary">Get Started</button>
+          <button>Let`s Go</button>
         </div>
       </div>
     </div>
